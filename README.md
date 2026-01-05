@@ -1432,3 +1432,111 @@ Confidence is what buyers pay for.
 ---
 
 _End of Exit-Ready System Architecture_
+
+---
+
+# Version v1.4 – Governance & Legal Abstraction
+## Designing Control Without Centralized Dependency
+
+This document explains how governance and legal responsibility
+are abstracted away from day-to-day operations.
+
+The goal is to ensure that:
+- decisions are accountable
+- execution remains autonomous
+- legal and operational risk do not mix
+
+---
+
+## Governance as a Boundary, Not a Bottleneck
+
+In this architecture, governance does not operate the system.
+It defines the **limits within which the system operates**.
+
+Governance exists to answer:
+- what is allowed
+- what is forbidden
+- when escalation is required
+
+It does not answer:
+- how tasks are executed
+- which tools are used
+- how fast the system runs
+
+---
+
+## Separation of Legal and Operational Logic
+
+Legal responsibility is intentionally isolated from automation.
+
+Automation:
+- executes predefined behavior
+- follows rules blindly
+- does not interpret intent
+
+Governance:
+- sets constraints
+- approves irreversible actions
+- handles external accountability
+
+This separation prevents legal ambiguity
+caused by autonomous behavior.
+
+---
+
+## Escalation as an Explicit Mechanism
+
+Nothing escalates implicitly.
+
+Escalation only happens when:
+- predefined thresholds are crossed
+- critical incidents occur
+- irreversible actions are requested
+
+This makes governance involvement:
+- predictable
+- auditable
+- minimal
+
+---
+
+## Jurisdiction-Agnostic Design
+
+The system does not encode jurisdiction-specific rules.
+
+Instead:
+- legal constraints are abstracted as policies
+- policies can be swapped without architectural changes
+- automation remains unchanged
+
+This allows the platform to adapt to:
+- different countries
+- different corporate structures
+- future regulatory shifts
+
+---
+
+## Governance as a Confidence Signal
+
+From an external perspective,
+strong governance increases trust.
+
+It signals that:
+- risk is managed
+- decisions are traceable
+- autonomy is controlled
+
+Governance exists to make the system **credible**, not slow.
+
+---
+
+## Closing Note on Governance Abstraction
+
+Good governance is invisible during normal operation.
+It only becomes visible when it is needed.
+
+That is by design.
+
+---
+
+_End of Governance & Legal Abstraction_
