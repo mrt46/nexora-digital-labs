@@ -1,11 +1,3 @@
-Çok net bir soru sordun 👍
-Önce 1️⃣ prompt sözleşmelerini eksiksiz vereceğim, sonra 2️⃣ bunları mimaride NEREYE ve NASIL ekleyeceğini adım adım göstereceğim.
-Bu cevap uygulamaya dönük, belirsizlik bırakmaz.
-
-Rolüm değişmedi: Chief Architect / Platform Engineer
-
-
----
 
 1️⃣ REGIONAL TREND INTELLIGENCE – PROMPT SÖZLEŞMELERİ
 
