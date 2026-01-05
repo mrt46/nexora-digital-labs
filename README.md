@@ -651,8 +651,12 @@ json
   "source": "agent-name | system",
   "payload": {},
   "priority": "low | normal | high | critical"
- }---
+ }
 
+
+---
+
+---
 
 ### Version v1.2.0 – Event System, Site Cloning & Failure Handling
 
