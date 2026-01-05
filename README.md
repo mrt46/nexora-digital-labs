@@ -643,7 +643,7 @@ All events follow this schema:
 
 ```
 json
-{
+ {
   "event_id": "uuid",
   "timestamp": "ISO-8601",
   "site_id": "site-XX",
@@ -651,14 +651,10 @@ json
   "source": "agent-name | system",
   "payload": {},
   "priority": "low | normal | high | critical"
-}
+ }---
 
 
----
-
----
-
-# Version v1.2.0 – Event System, Site Cloning & Failure Handling
+### Version v1.2.0 – Event System, Site Cloning & Failure Handling
 
 This document describes the event-driven control model, the site cloning
 strategy, and the failure handling approach used in the platform.
