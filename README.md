@@ -641,9 +641,9 @@ If something happens, it happens **via an event**.
 
 All events follow this schema:
 
-```
-json
- {
+---
+``` json
+{
   "event_id": "uuid",
   "timestamp": "ISO-8601",
   "site_id": "site-XX",
@@ -651,9 +651,8 @@ json
   "source": "agent-name | system",
   "payload": {},
   "priority": "low | normal | high | critical"
- }
-
-
+}
+``` 
 ---
 
 ---
