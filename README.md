@@ -603,3 +603,300 @@ Impact: Enables controlled scaling, cost enforcement, and automation safety
 
 ---
 
+# VERSION v1.2.0
+## Event System, Site Cloning & Failure Handling
+### Append-Only Architecture Extension
+
+Date: 2026-01-05  
+Author Role: Chief Architect / Platform Engineer  
+Status: ACTIVE
+
+---
+
+## v1.2.1 – GLOBAL EVENT SCHEMA (SYSTEM NERVOUS SYSTEM)
+
+### PURPOSE
+
+Events are the **only way** actions are triggered inside Nexora Digital Labs.
+
+- No direct agent calls
+- No hidden execution
+- No implicit behavior
+
+If something happens, it happens **via an event**.
+
+---
+
+### EVENT DESIGN PRINCIPLES
+
+1. Every event is immutable
+2. Every event has a site scope
+3. Every event is routed through Orchestrator
+4. Events do not guarantee execution
+5. Events can be ignored, delayed, or killed
+
+---
+
+### BASE EVENT STRUCTURE (MANDATORY)
+
+All events follow this schema:
+
+```
+json
+{
+  "event_id": "uuid",
+  "timestamp": "ISO-8601",
+  "site_id": "site-XX",
+  "event_type": "STRING",
+  "source": "agent-name | system",
+  "payload": {},
+  "priority": "low | normal | high | critical"
+}
+
+
+---
+
+---
+
+# Version v1.2.0 – Event System, Site Cloning & Failure Handling
+
+This document describes the event-driven control model, the site cloning
+strategy, and the failure handling approach used in the platform.
+
+The goal of this version is to enable **safe scaling**, **explicit control**,
+and **predictable behavior** as the system grows.
+
+---
+
+## Core System Events
+
+Events represent facts about what has happened in the system.
+They do not execute logic. They describe state changes and signals.
+
+### Site Lifecycle
+- SITE_CREATED
+- SITE_STATE_CHANGED
+- SITE_FROZEN
+- SITE_KILLED
+
+### Content
+- CONTENT_IDEA_CREATED
+- CONTENT_GENERATED
+- CONTENT_PUBLISHED
+- CONTENT_PERFORMANCE_LOW
+- CONTENT_KILLED
+
+### SEO & Traffic
+- PAGE_INDEXED
+- IMPRESSION_DETECTED
+- TRAFFIC_SPIKE
+- TRAFFIC_DROP
+
+### Data & Performance
+- KPI_THRESHOLD_REACHED
+- COST_LIMIT_APPROACHING
+- COST_LIMIT_EXCEEDED
+- REVENUE_STABLE
+- REVENUE_DROP
+
+### Business
+- SPONSOR_INQUIRY_RECEIVED
+- AFFILIATE_CONVERSION
+- MONETIZATION_ENABLED
+
+### Security
+- SECURITY_ALERT
+- UNAUTHORIZED_ACCESS
+- SYSTEM_ANOMALY
+
+---
+
+## Event Handling Rule
+
+Events suggest actions.  
+The Orchestrator decides actions.
+
+No event executes logic directly.
+
+This separation ensures that:
+- behavior remains observable
+- execution stays centralized
+- failures do not cascade silently
+
+---
+
+## 2. Site Cloning Protocol (1 → Many)
+
+### Purpose
+
+Scaling is achieved by **replicating proven success**, not experimentation.
+
+A site may only be cloned after reaching the **SCALABLE (Level 4)** state.
+
+---
+
+### Cloning Eligibility Conditions
+
+A site is eligible for cloning if all of the following are true:
+
+- State is SCALABLE
+- Revenue is stable over a defined window
+- Cost per content is below threshold
+- No active incidents exist
+- Governance approval is granted via the Orchestrator
+
+---
+
+### Cloning Process
+
+1. `CLONE_REQUEST` event is emitted  
+2. Orchestrator validates eligibility  
+3. A new `site_id` is generated  
+4. Site definition is copied from the template  
+5. Niche-specific parameters are adjusted  
+6. Initial state is set to SEED  
+7. Budget limits are inherited  
+8. New site is registered in the system  
+
+---
+
+### Inheritance Rules
+
+**Inherited**
+- Architecture rules
+- Automation logic
+- Agent contracts
+- Budget policies
+
+**Customizable**
+- Domain
+- Brand identity
+- Content focus
+- Language and region
+
+**Not Inherited**
+- Historical data
+- SEO trust
+- Revenue history
+- External reputation
+
+Each site earns trust independently.
+
+---
+
+### Cloning Limits
+
+- Maximum concurrent clones are defined by the Orchestrator
+- Cloning may be delayed, throttled, or cancelled
+- Scaling is always controlled, never explosive
+
+---
+
+## 3. Failure & Incident Playbook
+
+### Purpose
+
+Failures are inevitable.  
+Chaos is not.
+
+This playbook defines deterministic responses to system failures,
+unexpected behavior, and operational risk.
+
+---
+
+### Incident Classification
+
+#### Level 1 – Minor
+
+Examples:
+- Single content generation failure
+- Small traffic fluctuation
+- Temporary API issue
+
+Response:
+- Log incident
+- Monitor
+- No intervention
+
+---
+
+#### Level 2 – Major
+
+Examples:
+- Cost spike
+- Sustained traffic drop
+- Repeated low performance signals
+
+Response:
+- Freeze relevant actions
+- Trigger data analysis
+- Orchestrator decides next step
+
+---
+
+#### Level 3 – Critical
+
+Examples:
+- Security alert
+- Budget breach
+- Automation loop detected
+
+Response:
+- Kill affected processes
+- Freeze entire site if needed
+- Notify Governance immediately
+
+---
+
+### Failure Response Flow
+
+Incident Detected  
+→ Event Emitted  
+→ Orchestrator Classifies Severity  
+→ Immediate Action (Kill / Freeze / Slow)  
+→ Data Analysis  
+→ Governance Review (if required)
+
+---
+
+### Automation Loop Protection
+
+If the system detects:
+- Repeated identical events
+- Rapid cost increase without results
+- Execution without measurable performance gain
+
+Then:
+- Orchestrator automatically slows execution
+- Budgets are throttled
+- Incident is logged
+
+---
+
+### Post-Incident Rule
+
+After any Level 3 incident:
+- No scaling is allowed
+- No new sites may be created
+- The system must stabilize before resuming growth
+
+---
+
+## Version Log Entry
+
+**v1.2.0**
+
+**Reason:**  
+Introduce event-driven control, safe scaling, and failure tolerance
+
+**Impact:**  
+The system is now observable, auditable, and resilient under stress
+
+---
+
+_End of Version v1.2.0_
+
+
+
+---
+
