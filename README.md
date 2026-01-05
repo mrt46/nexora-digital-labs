@@ -1641,3 +1641,92 @@ and easier to acquire.
 ---
 
 _End of Metrics & KPIs_
+
+---
+
+# Version v1.4 – Infrastructure & Hosting Decisions
+## Designing for Stability, Not Brilliance
+
+This document explains how infrastructure choices
+support long-term stability, compliance, and cost control.
+
+The goal is not maximum performance,
+but **predictable behavior under load**.
+
+---
+
+## Infrastructure as a Supporting Actor
+
+Infrastructure does not drive architecture.
+It supports it.
+
+Decisions are made to:
+- minimize surprise
+- simplify operations
+- reduce dependency risk
+
+---
+
+## EU-Centered Hosting Strategy
+
+The platform is designed with:
+- EU-based hosting
+- GDPR-aligned defaults
+- clear data locality
+
+This provides:
+- regulatory clarity
+- buyer confidence
+- operational simplicity
+
+---
+
+## Shared Infrastructure, Isolated Sites
+
+Sites share infrastructure primitives
+but remain logically isolated.
+
+This ensures:
+- cost efficiency
+- fault containment
+- independent valuation
+
+No site is technically coupled to another.
+
+---
+
+## Boring Technology Bias
+
+The platform intentionally prefers:
+- widely adopted tools
+- conservative configurations
+- well-understood trade-offs
+
+Novelty increases fragility.
+Fragility reduces value.
+
+---
+
+## Cost Behavior Over Raw Cost
+
+Infrastructure is evaluated by:
+- cost variance
+- scaling behavior
+- failure recovery patterns
+
+A slightly higher but stable cost
+is preferred over a volatile cheap one.
+
+---
+
+## Closing Note on Infrastructure
+
+Infrastructure choices are rarely visible.
+Their consequences always are.
+
+This architecture chooses predictability
+over brilliance.
+
+---
+
+_End of Infrastructure & Hosting Decisions_
