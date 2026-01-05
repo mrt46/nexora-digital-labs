@@ -1540,3 +1540,104 @@ That is by design.
 ---
 
 _End of Governance & Legal Abstraction_
+
+---
+
+# Version v1.4 – Metrics & KPIs
+## Measuring What Actually Matters
+
+This document defines how metrics are selected,
+interpreted, and exposed from a buyer’s perspective.
+
+The goal is not to track everything,
+but to track what reduces uncertainty.
+
+---
+
+## Metrics as Evidence, Not Vanity
+
+Metrics exist to answer one question:
+> Can this system be trusted to behave predictably?
+
+Vanity metrics increase noise.
+Predictive metrics increase value.
+
+---
+
+## Core Metric Categories
+
+### Traffic Quality
+- organic traffic consistency
+- search demand stability
+- engagement patterns
+
+These metrics indicate demand durability,
+not short-term spikes.
+
+---
+
+### Revenue Stability
+- revenue variance
+- monetization uptime
+- channel dependency
+
+Buyers care more about **smooth revenue**
+than aggressive growth.
+
+---
+
+### Cost Predictability
+- cost per content
+- infrastructure stability
+- automation overhead
+
+Predictable cost equals predictable margins.
+
+---
+
+### Operational Independence
+- human intervention frequency
+- manual overrides
+- undocumented processes
+
+Lower dependency increases transferability.
+
+---
+
+## Metrics as Narratives
+
+Metrics are not just numbers.
+They tell a story about behavior.
+
+A good metric answers:
+- what changed
+- why it changed
+- whether it matters
+
+Anything else is noise.
+
+---
+
+## Buyer-Facing Transparency
+
+All metrics are:
+- reproducible
+- time-series based
+- explainable
+
+Nothing depends on tribal knowledge.
+
+This reduces buyer diligence friction.
+
+---
+
+## Closing Note on Metrics
+
+A system with clear metrics
+is easier to price,
+easier to trust,
+and easier to acquire.
+
+---
+
+_End of Metrics & KPIs_
