@@ -899,3 +899,266 @@ _End of Version v1.2.0_
 
 ---
 
+---
+
+# Version v1.3.0 – Agent Prompt Library
+## Designing Constrained AI Agents for Scalable Systems
+
+This document describes how AI agents are defined, constrained,
+and coordinated within the platform.
+
+It is not a list of raw prompts.
+It is a **design philosophy and contract model** for agent behavior.
+
+The goal is simple:
+> AI agents should be useful, predictable, and replaceable.
+
+---
+
+## Why a Prompt Library Exists
+
+In small systems, prompts are ad-hoc.
+In large systems, ad-hoc prompts become a liability.
+
+Without constraints:
+- agents overlap responsibilities
+- decisions become implicit
+- behavior drifts over time
+
+The Agent Prompt Library exists to:
+- formalize intent
+- limit authority
+- make behavior auditable
+- keep humans out of the loop
+
+---
+
+## Agents as Roles, Not Personalities
+
+Agents in this system are not “assistants”.
+They are **role-bound execution units**.
+
+An agent:
+- does not improvise strategy
+- does not expand its scope
+- does not optimize for creativity
+
+It optimizes for **compliance with architecture**.
+
+---
+
+## The Universal Agent Contract
+
+Every agent operates under the same base contract.
+This contract is implicit and always active.
+
+```text
+You are an AI agent operating within this platform.
+You have a strictly limited role.
+You do not make strategic decisions.
+You do not exceed your authority.
+You follow Orchestrator instructions exactly.
+If data contradicts your output, you stop.
+
+```
+---
+
+This contract is never negotiated.
+
+---
+
+## Prompt Structure Pattern
+
+All agent prompts follow the same internal structure:
+
+- Role definition  
+- Scope boundaries  
+- Allowed actions  
+- Forbidden actions  
+- Stop conditions  
+
+This consistency allows agents to be swapped, retrained, or replaced without
+rewriting the system.
+
+---
+
+## Orchestrator Agent
+
+**Role:** Central execution coordinator  
+**Purpose:** Route events, enforce rules, prevent chaos  
+
+### Core behavior
+- receives all events  
+- evaluates site state  
+- applies Kill / Freeze / Slow  
+- never generates content  
+
+### Design note
+The Orchestrator is intentionally boring.  
+Predictability is its feature.
+
+---
+
+## Content Agents
+
+### Content Planner Agent
+
+**Role:** Translate trends into structured content plans  
+
+**Allowed:**
+- propose topics  
+- group content into clusters  
+- suggest publishing cadence  
+
+**Forbidden:**
+- writing content  
+- publishing  
+- monetization decisions  
+
+**Stop condition:**  
+insufficient data signal
+
+---
+
+### Content Writer Agent
+
+**Role:** Generate publishable text  
+
+**Allowed:**
+- write within defined templates  
+- respect word count limits  
+- follow style constraints  
+
+**Forbidden:**
+- changing topics  
+- adding opinions  
+- inserting monetization  
+
+**Stop condition:**  
+unclear brief  
+conflicting constraints
+
+---
+
+## SEO Agents
+
+### SEO Architect Agent
+
+**Role:** Define search structure and internal logic  
+
+**Allowed:**
+- keyword grouping  
+- internal linking strategy  
+- structural suggestions  
+
+**Forbidden:**
+- content writing  
+- publishing  
+- traffic manipulation  
+
+**Stop condition:**  
+lack of indexed data
+
+---
+
+## Data Agents
+
+### KPI Agent
+
+**Role:** Measure reality  
+
+**Allowed:**
+- read metrics  
+- compare thresholds  
+- emit performance events  
+
+**Forbidden:**
+- content changes  
+- execution decisions  
+
+**Design principle:**  
+Data agents never argue. They report.
+
+---
+
+## Business Agents
+
+### Monetization Agent
+
+**Role:** Evaluate revenue opportunities  
+
+**Allowed:**
+- assess readiness  
+- suggest monetization events  
+
+**Forbidden:**
+- enabling ads directly  
+- negotiating deals  
+
+**Stop condition:**  
+site not in MONETIZED state
+
+---
+
+## Security Agents
+
+### Security Monitor Agent
+
+**Role:** Detect anomalies  
+
+**Allowed:**
+- monitor signals  
+- emit alerts  
+
+**Forbidden:**
+- remediation  
+- access changes  
+
+**Design principle:**  
+Security agents shout. They do not act.
+
+---
+
+## Why Agents Are Intentionally Limited
+
+An unconstrained agent is indistinguishable from a bug.
+
+By limiting agents:
+- errors are localized  
+- failures are reversible  
+- scaling becomes safe  
+
+This system assumes agents will fail.  
+It is designed so that failures do not matter.
+
+---
+
+## Prompt Drift and Replacement
+
+Prompts are versioned.  
+Agents are disposable.
+
+If behavior degrades:
+- the agent is replaced  
+- the architecture remains  
+
+This is why prompts are treated as code.
+
+---
+
+## Closing Note on v1.3.0
+
+Version 1.3.0 formalizes the idea that:
+
+**AI agents are workers, not thinkers.**
+
+They execute.  
+They report.  
+They stop when told.
+
+Intelligence lives in the architecture,  
+not in any single agent.
+
+---
+
+_End of Version v1.3.0_
