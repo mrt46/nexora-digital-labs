@@ -1730,3 +1730,238 @@ over brilliance.
 ---
 
 _End of Infrastructure & Hosting Decisions_
+
+---
+
+# Version v1.6 – Risk Register & Mitigation Model
+## Designing for Failure Without Fear
+
+This document defines how risk is identified, classified,
+and mitigated across the platform.
+
+The goal is not to eliminate risk.
+The goal is to **contain it, price it, and survive it**.
+
+---
+
+## Why a Risk Register Exists
+
+Most automated systems fail for predictable reasons:
+- costs drift
+- automation loops form
+- platforms change rules
+- legal assumptions break
+
+What kills systems is not risk itself,
+but **unacknowledged risk**.
+
+This register exists to make risk:
+- visible
+- bounded
+- actionable
+
+---
+
+## Risk as a First-Class Signal
+
+In this architecture, risk is not an afterthought.
+It is treated as a **data source**.
+
+Risks:
+- emit signals
+- trigger events
+- influence system behavior
+
+Ignoring risk is considered a system failure.
+
+---
+
+## Risk Classification Model
+
+All risks are classified along two dimensions:
+
+- **Impact** (Low / Medium / High)
+- **Likelihood** (Low / Medium / High)
+
+Only risks with **Medium+ impact** are actively mitigated.
+Low-impact risks are monitored, not optimized.
+
+---
+
+## Core Risk Categories
+
+### 1. Financial Risk
+
+Examples:
+- uncontrolled content costs
+- monetization instability
+- traffic without revenue
+
+Mitigation:
+- strict budget caps
+- revenue-to-cost thresholds
+- automatic slowdowns
+
+Design principle:
+> The system is allowed to stop making money  
+> before it is allowed to lose money.
+
+---
+
+### 2. Automation Risk
+
+Examples:
+- infinite loops
+- runaway agents
+- repeated low-value actions
+
+Mitigation:
+- event deduplication
+- execution throttling
+- hard kill switches
+
+Design principle:
+> Any process that cannot be stopped  
+> is a bug.
+
+---
+
+### 3. Platform Dependency Risk
+
+Examples:
+- search algorithm updates
+- ad network policy changes
+- API deprecations
+
+Mitigation:
+- diversification across topics
+- delayed reaction to spikes
+- avoidance of single-channel dependency
+
+Design principle:
+> Stability beats optimization.
+
+---
+
+### 4. Legal & Brand Risk
+
+Examples:
+- trademark disputes
+- misleading branding
+- content liability exposure
+
+Mitigation:
+- legal agent reviews
+- conservative naming
+- early takedown mechanisms
+
+Design principle:
+> It is cheaper to abandon a name  
+> than to defend it.
+
+---
+
+### 5. Security Risk
+
+Examples:
+- unauthorized access
+- data leaks
+- compromised automation credentials
+
+Mitigation:
+- minimal access scope
+- credential rotation
+- anomaly detection
+
+Design principle:
+> Security agents detect.
+They do not negotiate.
+
+---
+
+### 6. Key-Person Risk
+
+Examples:
+- founder dependency
+- undocumented decisions
+- manual processes
+
+Mitigation:
+- append-only logs
+- agent-based execution
+- human intervention decay
+
+Design principle:
+> If one person leaving breaks the system,  
+> the system was never finished.
+
+---
+
+## Risk Register Structure
+
+Each identified risk is logged with:
+
+- Risk ID
+- Category
+- Description
+- Impact level
+- Likelihood
+- Mitigation strategy
+- Current status
+
+Risks are never deleted.
+They are closed, not erased.
+
+---
+
+## Risk → Event Mapping
+
+When a risk threshold is crossed:
+- an event is emitted
+- the Orchestrator reacts
+- execution is adjusted
+
+Risk does not panic the system.
+It **informs it**.
+
+---
+
+## Governance Role in Risk
+
+Governance does not hunt risks.
+It reviews how risks are handled.
+
+Governance intervenes only when:
+- mitigation fails
+- risk escalates
+- irreversible decisions are proposed
+
+This keeps governance calm and credible.
+
+---
+
+## Risk and Exit Readiness
+
+Buyers do not expect zero risk.
+They expect **risk awareness**.
+
+A documented risk register:
+- reduces diligence friction
+- increases confidence
+- protects valuation
+
+Risk ignored is value destroyed.
+
+---
+
+## Closing Note on v1.6
+
+This architecture assumes failure.
+It simply refuses to be surprised by it.
+
+A system that understands its risks
+can afford to grow.
+
+---
+
+_End of Version v1.6_
