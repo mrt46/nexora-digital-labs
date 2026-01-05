@@ -1965,3 +1965,296 @@ can afford to grow.
 ---
 
 _End of Version v1.6_
+
+---
+
+# Version v1.6 – Human Intervention Policy
+## Defining When Humans May Act — and When They May Not
+
+This document defines the strict boundaries of human involvement
+in an AI-native, automated platform.
+
+The goal is not to remove humans.
+The goal is to **prevent humans from becoming a dependency**.
+
+---
+
+## Core Principle
+
+> Humans may approve.  
+> Humans may review.  
+> Humans may stop the system.  
+> Humans may not operate the system.
+
+Any action outside this boundary is considered architectural drift.
+
+---
+
+## Why Human Intervention Must Be Explicit
+
+In automated systems, undocumented human actions are the most dangerous failure mode.
+
+They:
+- bypass safeguards
+- break repeatability
+- destroy audit trails
+- reduce exit value
+
+This policy exists to make human involvement:
+- rare
+- deliberate
+- observable
+
+---
+
+## Allowed Human Actions
+
+Humans are allowed to act only in the following cases.
+
+### 1. Approval Gates
+
+Humans may approve or reject:
+- brand names
+- domain purchases
+- irreversible governance decisions
+
+Approval is binary.
+No partial approvals.
+No conditional edits.
+
+---
+
+### 2. Emergency Stop (Kill Switch)
+
+Humans may:
+- freeze a site
+- stop all automation
+- revoke credentials
+
+Emergency actions:
+- must be logged
+- require a reason
+- trigger a post-incident review
+
+---
+
+### 3. Governance-Level Review
+
+Humans may review:
+- risk register summaries
+- legal assessments
+- performance reports
+
+Review does not imply execution.
+
+---
+
+## Forbidden Human Actions
+
+Humans must never:
+
+- manually publish content
+- manually change SEO structure
+- manually tweak monetization
+- directly instruct agents
+- bypass the Orchestrator
+
+If a human feels the need to do so,
+the architecture has failed.
+
+---
+
+## Human Intervention Decay Model
+
+Human involvement decreases over time by design.
+
+- Early phase: observation and approval
+- Growth phase: approval only
+- Mature phase: reporting only
+
+The system is considered unhealthy
+if human involvement increases over time.
+
+---
+
+## Logging and Accountability
+
+Every human action must generate:
+- timestamp
+- reason
+- scope
+- outcome
+
+No human action is invisible.
+
+---
+
+## Human Absence as a Test Case
+
+The system must remain operational if:
+- the founder is unavailable
+- no human action is taken for extended periods
+
+If absence breaks the system,
+the system is not finished.
+
+---
+
+## Closing Note on Human Intervention
+
+Humans exist to:
+- set boundaries
+- approve irreversible actions
+- stop the system if needed
+
+They do not exist to “make it work”.
+
+---
+
+_End of Version v1.6 – Human Intervention Policy_
+
+---
+
+# Version v1.6 – Content Quality & Trust Model
+## Producing AI Content That Ages Well
+
+This document defines how AI-generated content
+maintains quality, trust, and long-term value.
+
+The goal is not volume.
+The goal is **durability**.
+
+---
+
+## The Problem With AI Content
+
+Most AI content fails because:
+- it is optimized for speed
+- it lacks accountability
+- it produces short-lived value
+
+Search engines change.
+Readers lose trust.
+Assets decay.
+
+This model exists to slow that decay.
+
+---
+
+## Content as a Long-Term Asset
+
+Every piece of content is treated as:
+- an indexed artifact
+- a reputational signal
+- a potential liability
+
+Low-quality content is not neutral.
+It is actively harmful.
+
+---
+
+## Quality Signals Over Time
+
+Content quality is evaluated using:
+- engagement stability
+- update frequency
+- relevance decay
+- correction history
+
+Initial performance is less important
+than long-term behavior.
+
+---
+
+## Trust Through Constraint
+
+AI agents are intentionally constrained.
+
+They:
+- follow strict templates
+- avoid speculative claims
+- cite sources where required
+- prefer clarity over persuasion
+
+Creativity is limited by design.
+
+---
+
+## E-E-A-T Alignment Without Mimicry
+
+The system does not fake expertise.
+It earns trust structurally by:
+
+- consistent topical focus
+- transparent authorship (AI-assisted)
+- fast correction of errors
+- conservative claims
+
+Trust emerges from restraint.
+
+---
+
+## Content Lifecycle Management
+
+Content is not permanent by default.
+
+Possible states:
+- ACTIVE
+- NEEDS_UPDATE
+- DEPRECATED
+- REMOVED
+
+Removal is considered a success
+if it protects trust.
+
+---
+
+## Feedback Loops
+
+Low-quality signals trigger:
+- content throttling
+- stricter templates
+- reduced publication frequency
+
+High-quality signals do not accelerate recklessly.
+They stabilize.
+
+---
+
+## Human Role in Content Quality
+
+Humans:
+- do not edit individual articles
+- do not rewrite content
+- may adjust system-level constraints
+
+Quality is enforced by rules,
+not taste.
+
+---
+
+## Why This Model Works Long-Term
+
+Search engines reward:
+- consistency
+- restraint
+- predictability
+
+So do buyers.
+
+This model optimizes for both.
+
+---
+
+## Closing Note on Content Trust
+
+AI content does not need to be impressive.
+It needs to be **reliable**.
+
+Reliability compounds.
+Noise does not.
+
+---
+
+_End of Version v1.6 – Content Quality & Trust Model_
+
