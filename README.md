@@ -1162,3 +1162,273 @@ not in any single agent.
 ---
 
 _End of Version v1.3.0_
+
+
+---
+
+# Version v1.3 – Revenue Engine Architecture
+## Designing Monetization as a Controlled System
+
+This document explains how revenue generation is designed as a **systemic capability**,
+not as an ad-hoc optimization layer.
+
+The goal is not to maximize revenue at all costs.
+The goal is to generate **predictable income without destabilizing the platform**.
+
+---
+
+## Revenue as a State, Not a Feature
+
+In this architecture, monetization is not something that gets “turned on”.
+It is something a site **becomes ready for**.
+
+A site does not earn revenue because ads were enabled.
+It earns revenue because traffic, behavior, and cost signals justify monetization.
+
+This is why revenue decisions are **state-dependent**, not manual.
+
+---
+
+## Separation of Concerns
+
+Revenue generation is deliberately separated from:
+
+- content production
+- SEO optimization
+- infrastructure decisions
+
+Content agents never insert ads.  
+SEO agents never optimize for revenue.  
+Infrastructure never reacts to monetization signals.
+
+Only the Revenue Engine evaluates readiness.
+
+---
+
+## Revenue Readiness Signals
+
+Before monetization is allowed, the system looks for:
+
+- stable organic traffic
+- predictable engagement patterns
+- acceptable cost per content
+- absence of unresolved incidents
+
+Revenue is introduced only when these signals align.
+
+This avoids premature monetization,
+which is one of the most common long-term failure modes of content platforms.
+
+---
+
+## Monetization Channels as Modules
+
+Revenue channels are treated as **replaceable modules**:
+
+- display advertising
+- affiliate links
+- sponsorship placements
+
+Each module:
+- can be enabled independently
+- can be throttled or disabled
+- does not alter core behavior
+
+No revenue module is allowed to block content or SEO execution.
+
+---
+
+## The Role of the Monetization Agent
+
+The Monetization Agent does not “make money”.
+It evaluates **when making money is appropriate**.
+
+Its responsibilities are limited to:
+- assessing readiness
+- emitting monetization-related events
+- monitoring revenue stability
+
+It never:
+- enables ads directly
+- negotiates sponsorships
+- overrides governance rules
+
+This keeps monetization boring — and safe.
+
+---
+
+## Revenue Stability Over Revenue Growth
+
+The system prioritizes **revenue stability** over revenue growth.
+
+A slower, stable income stream:
+- reduces risk
+- simplifies forecasting
+- increases asset value
+
+Aggressive monetization is treated as technical debt.
+
+---
+
+## Why Revenue Is Event-Driven
+
+Revenue changes are triggered by events, not decisions.
+
+Examples:
+- revenue stabilization
+- revenue drop
+- cost-to-revenue imbalance
+
+This allows the Orchestrator to:
+- slow content production
+- freeze monetization
+- adjust execution speed
+
+Revenue becomes observable and controllable,
+not emotional or reactive.
+
+---
+
+## Closing Note on Revenue Architecture
+
+This Revenue Engine exists to ensure that
+monetization never compromises system integrity.
+
+Revenue is a consequence of correctness,
+not a shortcut to it.
+
+---
+
+_End of Revenue Engine Architecture_
+
+---
+
+# Version v1.3 – Exit-Ready System Architecture
+## Designing for Sale Without Designing to Sell
+
+This document explains how the system is designed
+to be **sellable by default**, without being optimized for flipping.
+
+The assumption is simple:
+> Anything that can be sold should be ready to be sold at all times.
+
+---
+
+## Exit-Readiness as a Design Constraint
+
+Most systems think about exits too late.
+By the time revenue exists, architecture debt already limits options.
+
+In this platform, exit-readiness is treated as a **first-class constraint**.
+
+This affects:
+- how sites are isolated
+- how data is structured
+- how decisions are logged
+
+---
+
+## Sites as Independent Assets
+
+Each site is designed as a standalone unit:
+
+- independent domain
+- isolated analytics
+- separate revenue streams
+- clear cost attribution
+
+This allows:
+- single-site exits
+- portfolio exits
+- partial divestment
+
+The platform never requires selling everything at once.
+
+---
+
+## Transparent and Auditable Behavior
+
+Buyers do not trust growth.
+They trust **predictability**.
+
+This is why the system emphasizes:
+- append-only logs
+- explicit state transitions
+- measurable performance signals
+
+Nothing important happens implicitly.
+
+Every meaningful change has a trace.
+
+---
+
+## Human Independence as a Feature
+
+From an acquisition perspective,
+human dependency is risk.
+
+This system minimizes that risk by design:
+- no key operator
+- no undocumented workflows
+- no manual revenue hacks
+
+What runs today will run tomorrow,
+with or without the original founder.
+
+---
+
+## Cost Predictability Over Cost Minimization
+
+Low cost is good.
+Predictable cost is better.
+
+Exit value increases when:
+- expenses are stable
+- margins are consistent
+- scaling behavior is known
+
+The architecture optimizes for **cost clarity**, not absolute cheapness.
+
+---
+
+## Why Boring Architecture Sells
+
+Exciting systems are impressive.
+Boring systems are acquirable.
+
+This platform avoids:
+- exotic dependencies
+- clever hacks
+- non-reproducible processes
+
+What remains is something a buyer can understand,
+audit, and operate.
+
+---
+
+## Exit Is a Side Effect, Not a Goal
+
+The system is not built to be sold.
+It is built to **work correctly**.
+
+Sellability emerges naturally from:
+- isolation
+- predictability
+- documentation
+- restraint
+
+If an exit happens, the system is ready.
+If it does not, the system still performs.
+
+---
+
+## Closing Note on Exit-Ready Design
+
+An exit-ready system is not optimized for speed.
+It is optimized for confidence.
+
+Confidence is what buyers pay for.
+
+---
+
+_End of Exit-Ready System Architecture_
