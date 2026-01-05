@@ -31,3 +31,8 @@ Mitigation:
 
 Status:
 ACTIVE
+
+## v1.4.1 – EEAT & Authorship Strategy
+
+Added centralized authorship and trust model for early-phase sites.
+Defined risk-free contributor strategy aligned with platform guidelines.
